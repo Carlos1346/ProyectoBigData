@@ -13,84 +13,377 @@
             <h3>Por favor llene los siguientes datos</h3>
             <form action="/submit">
                 <div class="form-group">
-                    <label for="estadoCivil">1. ¿Cuál es tu estado
-                        civil?</label>
-                    <select name="esCivil" id="estadoCivil">
-                        <option value="1">Soltero</option>
-                        <option value="2">Casado</option>
-                        <option value="3">Viudo</option>
-                        <option value="4">Divorciado</option>
-                        <option value="5">Unión libre</option>
-                        <option value="6">Legalmente separado</option>
+                    <label for="titulo">1. ¿Cuál es la titulación de la
+                        madre?</label>
+                    <select name="titulo" id="tituloMadre">
+                        <option value="1">Educación Secundaria-12º año de
+                            escolarización o equivalente</option>
+                        <option value="2">Educación
+                            superior-licenciatura</option>
+                        <option value="3">Educación
+                            superior-licenciatura</option>
+                        <option value="4">Educación superior-máster</option>
+                        <option value="5">Educación superior-doctorado</option>
+                        <option value="6">Frecuencia de estudios
+                            superiores</option>
+                        <option value="7">12º año de escolarización-no
+                            completado</option>
+                        <option value="8">11º año de escolarización-no
+                            completado</option>
+                        <option value="9">7º año (antiguo)</option>
+                        <option value="10">Otro-11º año de
+                            escolarización</option>
+                        <option value="11">2º curso complementario de
+                            bachillerato</option>
+                        <option value="12">10º año de escolarización</option>
+                        <option value="13">Curso general de comercio</option>
+                        <option value="14">Educación Básica 3er Ciclo
+                            (9º/10º/11º Año) o Equivalente</option>
+                        <option value="15">Curso complementario de
+                            bachillerato</option>
+                        <option value="16">Curso técnico-profesional</option>
+                        <option value="17">Curso complementario de
+                            bachillerato-no concluido</option>
+                        <option value="18">7º año de escolaridad</option>
+                        <option value="19">2º ciclo del curso general de
+                            bachillerato</option>
+                        <option value="20">9º año de escolarización-no
+                            concluido</option>
+                        <option value="21">8º año de escolaridad</option>
+                        <option value="22">Curso General de Administración y
+                            Comercio</option>
+                        <option value="23">Curso complementario de
+                            Administración y Contabilidad</option>
+                        <option value="24">Desconocido</option>
+                        <option value="25">No sabe leer ni escribir</option>
+                        <option value="26">Sabe leer sin tener 4º año de
+                            escolaridad</option>
+                        <option value="27">Educación básica 1er ciclo (4º/5º
+                            curso) o equivalente</option>
+                        <option value="28">Educación básica 2º ciclo (6º/7º/8º
+                            año) o equivalente</option>
+                        <option value="29">Curso de especialización
+                            tecnológica</option>
+                        <option value="30">Título de enseñanza superior (1er
+                            ciclo)</option>
+                        <option value="31">Curso de estudios superiores
+                            especializados</option>
+                        <option value="32">Curso técnico superior
+                            profesional</option>
+                        <option value="33">Educación superior-título de máster
+                            (2º ciclo)</option>
+                        <option value="34">Educación superior-doctorado (3er
+                            ciclo)</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="nacionalidad">2. ¿Cuál es tu
-                        nacionalidad?</label>
-                    <select name="nacion" id="nacionalidad">
-                        <option value="1">Portugues</option>
-                        <option value="2">Alemán</option>
-                        <option value="3">Español</option>
-                        <option value="4">Italiano</option>
-                        <option value="5">Holandés</option>
-                        <option value="6">Inglés</option>
-                        <option value="7">Lituano</option>
-                        <option value="8">Angoleño</option>
-                        <option value="9">Cabo Verde</option>
-                        <option value="10">Guineano</option>
-                        <option value="11">Mozambiqueño</option>
-                        <option value="12">Santomano</option>
-                        <option value="13">Turco</option>
-                        <option value="14">Brasileño</option>
-                        <option value="15">Rumano</option>
-                        <option value="16">Moldavia</option>
-                        <option value="17">Mexicano</option>
-                        <option value="18">Ucraniano</option>
-                        <option value="19">Ruso</option>
-                        <option value="20">Cubano</option>
-                        <option value="21">Colombiano</option>
+                    <label for="titulo">2. ¿Cuál es la titulación del
+                        padre?</label>
+                    <select name="titulo" id="tituloPadre">
+                        <option value="1">Educación Secundaria-12º año de
+                            escolarización o equivalente</option>
+                        <option value="2">Educación
+                            superior-licenciatura</option>
+                        <option value="3">Educación
+                            superior-licenciatura</option>
+                        <option value="4">Educación superior-máster</option>
+                        <option value="5">Educación superior-doctorado</option>
+                        <option value="6">Frecuencia de estudios
+                            superiores</option>
+                        <option value="7">12º año de escolarización-no
+                            completado</option>
+                        <option value="8">11º año de escolarización-no
+                            completado</option>
+                        <option value="9">7º año (antiguo)</option>
+                        <option value="10">Otro-11º año de
+                            escolarización</option>
+                        <option value="11">2º curso complementario de
+                            bachillerato</option>
+                        <option value="12">10º año de escolarización</option>
+                        <option value="13">Curso general de comercio</option>
+                        <option value="14">Educación Básica 3er Ciclo
+                            (9º/10º/11º Año) o Equivalente</option>
+                        <option value="15">Curso complementario de
+                            bachillerato</option>
+                        <option value="16">Curso técnico-profesional</option>
+                        <option value="17">Curso complementario de
+                            bachillerato-no concluido</option>
+                        <option value="18">7º año de escolaridad</option>
+                        <option value="19">2º ciclo del curso general de
+                            bachillerato</option>
+                        <option value="20">9º año de escolarización-no
+                            concluido</option>
+                        <option value="21">8º año de escolaridad</option>
+                        <option value="22">Curso General de Administración y
+                            Comercio</option>
+                        <option value="23">Curso complementario de
+                            Administración y Contabilidad</option>
+                        <option value="24">Desconocido</option>
+                        <option value="25">No sabe leer ni escribir</option>
+                        <option value="26">Sabe leer sin tener 4º año de
+                            escolaridad</option>
+                        <option value="27">Educación básica 1er ciclo (4º/5º
+                            curso) o equivalente</option>
+                        <option value="28">Educación básica 2º ciclo (6º/7º/8º
+                            año) o equivalente</option>
+                        <option value="29">Curso de especialización
+                            tecnológica</option>
+                        <option value="30">Título de enseñanza superior (1er
+                            ciclo)</option>
+                        <option value="31">Curso de estudios superiores
+                            especializados</option>
+                        <option value="32">Curso técnico superior
+                            profesional</option>
+                        <option value="33">Educación superior-título de máster
+                            (2º ciclo)</option>
+                        <option value="34">Educación superior-doctorado (3er
+                            ciclo)</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="displazado">3. ¿Es usted
-                        <span class="tooltip-icon" tabindex="0">desplazado?
-                            <span class="tooltip-text">Haber dejado su localidad
-                                por causas ajenas</span>
-                        </span></label>
-                    <select name="desplazado" id="desplazado">
-                        <option value="0">No</option>
-                        <option value="1">Si</option>
+                    <label for="ocupacion">3. ¿Cuál es la ocupación de la
+                        madre?</label>
+                    <select name="ocupacion" id="ocupacionMadre">
+                        <option value="1">Estudiante</option>
+                        <option value="2">Representantes del Poder Legislativo y
+                            Órganos Ejecutivos, Directores, Directores y
+                            Gerentes Ejecutivos</option>
+                        <option value="3">Especialistas en Actividades
+                            Intelectuales y Científicas</option>
+                        <option value="4">Técnicos y Profesiones de Nivel
+                            Medio</option>
+                        <option value="5">Personal Administrativo</option>
+                        <option value="6">Trabajadores de Servicios Personales,
+                            Seguridad y Vendedores</option>
+                        <option value="7">Agricultores y trabajadores
+                            cualificados en la agricultura, la pesca y la
+                            silvicultura</option>
+                        <option value="8">Trabajadores cualificados en la
+                            industria, la construcción y la artesanía</option>
+                        <option value="9">Operadores de instalaciones y máquinas
+                            y montadores</option>
+                        <option value="10">Trabajadores no cualificados</option>
+                        <option value="11">Profesiones de las Fuerzas
+                            Armadas</option>
+                        <option value="12">Otra situación</option>
+                        <option value="13">(en blanco)</option>
+                        <option value="14">Oficiales de las Fuerzas
+                            Armadas</option>
+                        <option value="15">Sargentos de las Fuerzas
+                            Armadas</option>
+                        <option value="16">Otro personal de las Fuerzas
+                            Armadas</option>
+                        <option value="17">Directores de servicios
+                            administrativos y comerciales</option>
+                        <option value="18">Directores de hostelería, comercio y
+                            otros servicios</option>
+                        <option value="19">Especialistas en ciencias físicas,
+                            matemáticas, ingeniería y técnicas afines</option>
+                        <option value="20">Profesionales de la salud</option>
+                        <option value="21">Profesores</option>
+                        <option value="22">Especialistas en finanzas,
+                            contabilidad, organización administrativa y
+                            relaciones públicas y comerciales</option>
+                        <option value="23">Técnicos y profesionales de nivel
+                            medio de ciencias e ingeniería</option>
+                        <option value="24">Técnicos y profesionales sanitarios
+                            de nivel intermedio</option>
+                        <option value="25">Técnicos de nivel intermedio de
+                            servicios jurídicos, sociales, deportivos,
+                            culturales y similares</option>
+                        <option value="26">Técnicos en tecnologías de la
+                            información y la comunicación</option>
+                        <option value="27">Trabajadores de oficina, secretarios
+                            en general y operadores de procesamiento de
+                            datos</option>
+                        <option value="28">Operadores informáticos, contables,
+                            estadísticos, de servicios financieros y
+                            registrales</option>
+                        <option value="29">Otro personal de apoyo
+                            administrativo</option>
+                        <option value="30">Trabajadores de servicios
+                            personales</option>
+                        <option value="31">Vendedores</option>
+                        <option value="32">Asistentes personales y
+                            asimilados</option>
+                        <option value="33">Personal de los servicios de
+                            protección y seguridad</option>
+                        <option value="34">Agricultores orientados al mercado y
+                            trabajadores cualificados de la agricultura y la
+                            ganadería</option>
+                        <option value="35">Agricultores, ganaderos, pescadores,
+                            cazadores y recolectores, y subsistencia</option>
+                        <option value="36">Trabajadores cualificados de la
+                            construcción y asimilados, excepto
+                            electricistas</option>
+                        <option value="37">Trabajadores cualificados en
+                            metalurgia, metalistería y similares</option>
+                        <option value="38">Trabajadores cualificados en
+                            electricidad y electrónica</option>
+                        <option value="39">Trabajadores de los sectores de la
+                            alimentación, la madera, la confección y otras
+                            industrias y oficios artesanales</option>
+                        <option value="40">Operadores de instalaciones fijas y
+                            máquinas</option>
+                        <option value="41">Trabajadores de montaje</option>
+                        <option value="42">Conductores de vehículos y operadores
+                            de equipos móviles</option>
+                        <option value="43">Trabajadores no cualificados de la
+                            agricultura, la ganadería, la pesca y la
+                            silvicultura</option>
+                        <option value="44">Trabajadores no cualificados de las
+                            industrias extractivas, la construcción, la
+                            industria manufacturera y el transporte</option>
+                        <option value="45">Auxiliares de preparación de
+                            comidas</option>
+                        <option value="46">Vendedores ambulantes (excepto de
+                            alimentos) y proveedores de servicios
+                            ambulantes</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="genero">4. Género
-                        <select name="genero" id="genero">
-                            <option value="0">Mujer</option>
-                            <option value="1">Hombre</option>
+                    <label for="ocupacion">4. ¿Cuál es la ocupación del
+                        padre?</label>
+                    <select name="ocupacion" id="ocupacionPadre">
+                        <option value="1">Estudiante</option>
+                        <option value="2">Representantes del Poder Legislativo y
+                            Órganos Ejecutivos, Directores, Directores y
+                            Gerentes Ejecutivos</option>
+                        <option value="3">Especialistas en Actividades
+                            Intelectuales y Científicas</option>
+                        <option value="4">Técnicos y Profesiones de Nivel
+                            Medio</option>
+                        <option value="5">Personal Administrativo</option>
+                        <option value="6">Trabajadores de Servicios Personales,
+                            Seguridad y Vendedores</option>
+                        <option value="7">Agricultores y trabajadores
+                            cualificados en la agricultura, la pesca y la
+                            silvicultura</option>
+                        <option value="8">Trabajadores cualificados en la
+                            industria, la construcción y la artesanía</option>
+                        <option value="9">Operadores de instalaciones y máquinas
+                            y montadores</option>
+                        <option value="10">Trabajadores no cualificados</option>
+                        <option value="11">Profesiones de las Fuerzas
+                            Armadas</option>
+                        <option value="12">Otra situación</option>
+                        <option value="13">(en blanco)</option>
+                        <option value="14">Oficiales de las Fuerzas
+                            Armadas</option>
+                        <option value="15">Sargentos de las Fuerzas
+                            Armadas</option>
+                        <option value="16">Otro personal de las Fuerzas
+                            Armadas</option>
+                        <option value="17">Directores de servicios
+                            administrativos y comerciales</option>
+                        <option value="18">Directores de hostelería, comercio y
+                            otros servicios</option>
+                        <option value="19">Especialistas en ciencias físicas,
+                            matemáticas, ingeniería y técnicas afines</option>
+                        <option value="20">Profesionales de la salud</option>
+                        <option value="21">Profesores</option>
+                        <option value="22">Especialistas en finanzas,
+                            contabilidad, organización administrativa y
+                            relaciones públicas y comerciales</option>
+                        <option value="23">Técnicos y profesionales de nivel
+                            medio de ciencias e ingeniería</option>
+                        <option value="24">Técnicos y profesionales sanitarios
+                            de nivel intermedio</option>
+                        <option value="25">Técnicos de nivel intermedio de
+                            servicios jurídicos, sociales, deportivos,
+                            culturales y similares</option>
+                        <option value="26">Técnicos en tecnologías de la
+                            información y la comunicación</option>
+                        <option value="27">Trabajadores de oficina, secretarios
+                            en general y operadores de procesamiento de
+                            datos</option>
+                        <option value="28">Operadores informáticos, contables,
+                            estadísticos, de servicios financieros y
+                            registrales</option>
+                        <option value="29">Otro personal de apoyo
+                            administrativo</option>
+                        <option value="30">Trabajadores de servicios
+                            personales</option>
+                        <option value="31">Vendedores</option>
+                        <option value="32">Asistentes personales y
+                            asimilados</option>
+                        <option value="33">Personal de los servicios de
+                            protección y seguridad</option>
+                        <option value="34">Agricultores orientados al mercado y
+                            trabajadores cualificados de la agricultura y la
+                            ganadería</option>
+                        <option value="35">Agricultores, ganaderos, pescadores,
+                            cazadores y recolectores, y subsistencia</option>
+                        <option value="36">Trabajadores cualificados de la
+                            construcción y asimilados, excepto
+                            electricistas</option>
+                        <option value="37">Trabajadores cualificados en
+                            metalurgia, metalistería y similares</option>
+                        <option value="38">Trabajadores cualificados en
+                            electricidad y electrónica</option>
+                        <option value="39">Trabajadores de los sectores de la
+                            alimentación, la madera, la confección y otras
+                            industrias y oficios artesanales</option>
+                        <option value="40">Operadores de instalaciones fijas y
+                            máquinas</option>
+                        <option value="41">Trabajadores de montaje</option>
+                        <option value="42">Conductores de vehículos y operadores
+                            de equipos móviles</option>
+                        <option value="43">Trabajadores no cualificados de la
+                            agricultura, la ganadería, la pesca y la
+                            silvicultura</option>
+                        <option value="44">Trabajadores no cualificados de las
+                            industrias extractivas, la construcción, la
+                            industria manufacturera y el transporte</option>
+                        <option value="45">Auxiliares de preparación de
+                            comidas</option>
+                        <option value="46">Vendedores ambulantes (excepto de
+                            alimentos) y proveedores de servicios
+                            ambulantes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="necesidades">5. ¿Tiene necesidad de eduación especial?
+                        <select name="necesidades" id="especial">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
                         </select>
                     </label>
                 </div>
 
                 <div class="form-group">
-                    <label for="edad">5. Edad de inscripción</label>
-                    <input type="number" id="edad" name="edad" min="17"
-                        max="90" placeholder="Ingresar edad" required>
+                    <label for="deudor">6. ¿Tiene deuda con la escolaridad?
+                        <select name="deudor" id="deudor">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </label>
                 </div>
 
                 <div class="form-group">
-                    <label for="genero">6. Internacional
-                        <select name="genero" id="genero">
+                    <label for="vigencia">7. ¿Tiene sus tasas de matrícula al día?
+                        <select name="vigencia" id="vigente">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="becario">8. ¿Es becario?
+                        <select name="becario" id="becario">
                             <option value="0">No</option>
                             <option value="1">Si</option>
                         </select>
                     </label>
                 </div>
             </form>
-            <button>
-                <a href="./formSocioeconomico.html">Continuar</a>
+            <button class="boton">
+                <a href="">Continuar</a>
             </button>
         </div>
     </body>
