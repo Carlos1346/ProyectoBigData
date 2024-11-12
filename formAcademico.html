@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="form">
+            <h1>Formulario</h1>
+            <h2>Datos académicos</h2>
+            <h3>Por favor llene los siguientes datos</h3>
+            <form action="/submit">
+                <div class="form-group">
+                    <label for="modoApli">1. Seleccione su modo de aplicación</label>
+                    <select name="modoApli" id="modoApli">
+                        <option value="1">1ª fase-contingente general</option>
+                        <option value="2">Ordenanza nº 612/93</option>
+                        <option value="3">1ª fase-contingente especial (Islas Azores)</option>
+                        <option value="4">Titulares de otros cursos superiores</option>
+                        <option value="5">Ordenanza nº 854-B/99</option>
+                        <option value="6">Estudiante internacional (licenciatura)</option>
+                        <option value="7">1ª fase-contingente especial (Isla de Madeira)</option>
+                        <option value="8">2ª fase-contingente general</option>
+                        <option value="9">3ª fase-contingente general</option>
+                        <option value="10">Ordenanza nº 533-A/99, punto b2 (Plan Diferente)</option>
+                        <option value="11">Ordenanza nº 533-A/99, punto b3 (Otra Institución)</option>
+                        <option value="12">Mayores de 23 años</option>
+                        <option value="13">Transferencia</option>
+                        <option value="14">Cambio de curso</option>
+                        <option value="15">Titulados de especialización tecnológica</option>
+                        <option value="16">Cambio de institución/curso</option>
+                        <option value="17">Titulados de ciclo corto</option>
+                        <option value="18">Cambio de centro/curso (Internacional)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="carrera">2. Seleccione su carrera</label>
+                    <select name="carrera" id="carrera">
+                        <option value="1">Tecnologías de producción de biocombustibles</option>
+                        <option value="2">Diseño de animación y multimedia</option>
+                        <option value="3">Servicio Social (nocturno)</option>
+                        <option value="4">Agronomía</option>
+                        <option value="5">Diseño de Comunicación</option>
+                        <option value="6">Enfermería Veterinaria</option>
+                        <option value="7">Ingeniería Informática</option>
+                        <option value="8">Equinicultura</option>
+                        <option value="9">Gestión</option>
+                        <option value="10">Servicio Social</option>
+                        <option value="11">Turismo</option>
+                        <option value="12">Enfermería</option>
+                        <option value="13">Higiene oral</option>
+                        <option value="14">Publicidad y Gestión de Marketing</option>
+                        <option value="15">Periodismo y Comunicación</option>
+                        <option value="16">Educación básica</option>
+                        <option value="17">Gestión (nocturno)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="turno">3. Seleccione su tuno
+                        <select name="turno" id="turno">
+                            <option value="0">Matutino</option>
+                            <option value="1">Vespertino</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="tituloPrev">4. Seleccione su titulación previa
+                        <select name="tituloPrev" id="tituloPrev">
+                            <option value="1">Educación secundaria</option>
+                            <option value="2">Educación superior-licenciatura</option>
+                            <option value="3">Educación superior-licenciatura</option>
+                            <option value="4">Educación superior-máster</option>
+                            <option value="5">Educación superior-doctorado</option>
+                            <option value="6">Frecuencia de estudios superiores</option>
+                            <option value="7">12º año de escolarización-no completado</option>
+                            <option value="8">11º año de escolarización-no completado</option>
+                            <option value="9">Otro 11.º año de escolarización</option>
+                            <option value="10">10º año de escolarización</option>
+                            <option value="11">10º año de escolarización-no completado</option>
+                            <option value="12">Educación básica 3er ciclo (9º/10º/11º curso) o equivalente</option>
+                            <option value="13">Educación básica 2º ciclo (6º/7º/8º curso) o equivalente</option>
+                            <option value="14">Curso de especialización tecnológica</option>
+                            <option value="15">Título de enseñanza superior (1er ciclo)</option>
+                            <option value="16">Curso técnico superior profesional</option>
+                            <option value="17">Educación superior-título de máster (2º ciclo)</option>
+                        </select>
+                    </label>
+                </div>
+            </form>
+            <button class="boton">
+                <a href="">Continuar</a>
+            </button>
+        </div>
+    </body>
+</html>
