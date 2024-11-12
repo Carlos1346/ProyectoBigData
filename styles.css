@@ -6,17 +6,18 @@
     padding: 0;
 }
 
-body,
-html {
+html, body {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-    /* Fondo degradado */
+    background-image: url("https://static.vecteezy.com/system/resources/previews/009/362/398/non_2x/blue-dynamic-shape-abstract-background-suitable-for-web-and-mobile-app-backgrounds-eps-10-vector.jpg");
+    background-size: cover;
+    background-position: center;
     color: #333;
 }
+
 
 .form {
     width: 100%;
@@ -66,9 +67,9 @@ select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(225, 249, 250);
     font-family: 'Roboto', sans-serif;
-    color: #f0f0f0;
+    color: #080808;
 }
 
 input {
@@ -76,7 +77,7 @@ input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(196, 245, 247);
     font-family: 'Roboto', sans-serif;
     color: #f0f0f0;
 }
