@@ -1,0 +1,80 @@
+<!--FORM SEMESTRE UNO-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="form">
+            <h1>Formulario</h1>
+            <h2>Datos académicos al final del primer semestre</h2>
+            <h3>Por favor llene los siguientes datos</h3>
+            <form id="formSemestreUno">
+                <div class="form-group">
+                    <label for="acreditadas1">1. Ingrese sus unidades
+                        curriculares acreditadas </label>
+                    <input type="number" id="acreditadas1" name="acreditadas1"
+                        min="0" max="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inscritas1">2. Ingrese sus unidades curriculares
+                        inscritas</label>
+                    <input type="number" id="inscritas1" name="inscritas1"
+                        min="0"
+                        max="26" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="evaluadas1">3. Ingrese sus unidades curriculares
+                        evaluadas</label>
+                    <input type="number" id="evaluadas1" name="evaluadas1"
+                        min="0"
+                        max="45" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="aprobadas1">4. Ingrese sus unidades curriculares
+                        aprobadas</label>
+                    <input type="number" id="aprobadas1" name="aprobadas1"
+                        min="0"
+                        max="26" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="calificadas1">5. Ingrese sus unidades
+                        curriculares calificadas</label>
+                    <input type="number" id="calificadas1" name="calificadas1"
+                        min="0" max="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="noevaluadas1">6. Ingrese sus unidades
+                        curriculares sin evaluar</label>
+                    <input type="number" id="noevaluadas1" name="noevaluadas1"
+                        min="0" max="12" required>
+                </div>
+            </form>
+            <button type="button" class="btn next-page"
+                id="submitFormSemestreUno">
+                Continuar
+            </button>
+        </div>
+
+        <script>
+            document.getElementById('submitFormSemestreUno').addEventListener('click', function() {
+                localStorage.setItem('acreditadas1', document.getElementById('acreditadas1').value);
+                localStorage.setItem('inscritas1', document.getElementById('inscritas1').value);
+                localStorage.setItem('evaluadas1', document.getElementById('evaluadas1').value);
+                localStorage.setItem('aprobadas1', document.getElementById('aprobadas1').value);
+                localStorage.setItem('calificadas1', document.getElementById('calificadas1').value);
+                localStorage.setItem('noevaluadas1', document.getElementById('noevaluadas1').value);
+
+                window.location.href = "formSemestreDos.html";
+            });
+        </script>
+    </body>
+</html>

@@ -1,3 +1,4 @@
+<!--INDEX-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,13 +10,13 @@
     <body>
         <div class="form">
             <h1>Formulario</h1>
-            <h2>Datos demograficos</h2>
+            <h2>Datos demográficos</h2>
             <h3>Por favor llene los siguientes datos</h3>
-            <form action="/submit">
+            <form id="formDemografico">
                 <div class="form-group">
                     <label for="estadoCivil">1. ¿Cuál es tu estado
                         civil?</label>
-                    <select name="esCivil" id="estadoCivil">
+                    <select name="estadoCivil" id="estadoCivil">
                         <option value="1">Soltero</option>
                         <option value="2">Casado</option>
                         <option value="3">Viudo</option>
@@ -28,7 +29,7 @@
                 <div class="form-group">
                     <label for="nacionalidad">2. ¿Cuál es tu
                         nacionalidad?</label>
-                    <select name="nacion" id="nacionalidad">
+                    <select name="nacionalidad" id="nacionalidad">
                         <option value="1">Portugues</option>
                         <option value="2">Alemán</option>
                         <option value="3">Español</option>
@@ -54,44 +55,52 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="displazado">3. ¿Es usted
-                        <span class="tooltip-icon" tabindex="0">desplazado?
-                            <span class="tooltip-text">Haber dejado su localidad
-                                por causas ajenas</span>
-                        </span></label>
+                    <label for="desplazado">3. ¿Es usted desplazado?</label>
                     <select name="desplazado" id="desplazado">
                         <option value="0">No</option>
-                        <option value="1">Si</option>
+                        <option value="1">Sí</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="genero">4. Género
-                        <select name="genero" id="genero">
-                            <option value="0">Mujer</option>
-                            <option value="1">Hombre</option>
-                        </select>
-                    </label>
+                    <label for="genero">4. Género</label>
+                    <select name="genero" id="genero">
+                        <option value="0">Mujer</option>
+                        <option value="1">Hombre</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="edad">5. Edad de inscripción</label>
-                    <input type="number" id="edad" name="edad" min="17"
-                        max="90" placeholder="Ingresar edad" required>
+                    <input type="number" id="edad" name="edad" min="17" max="90"
+                        placeholder="Ingresar edad" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="genero">6. Internacional
-                        <select name="genero" id="genero">
-                            <option value="0">No</option>
-                            <option value="1">Si</option>
-                        </select>
-                    </label>
+                    <label for="internacional">6. ¿Es estudiante
+                        internacional?</label>
+                    <select name="internacional" id="internacional">
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
                 </div>
             </form>
-            <button class="btn next-page">
-                <a style="color: white;" href="formSocioeconomico.html">Continuar</a>
+            <button type="button" class="btn next-page"
+                id="submitFormDemogarfico">
+                Continuar
             </button>
         </div>
+        <script>
+            document.getElementById('submitFormDemogarfico').addEventListener('click', function() {
+                localStorage.setItem('estadoCivil', document.getElementById('estadoCivil').value);
+                localStorage.setItem('nacionalidad', document.getElementById('nacionalidad').value);
+                localStorage.setItem('desplazado', document.getElementById('desplazado').value);
+                localStorage.setItem('genero', document.getElementById('genero').value);
+                localStorage.setItem('edad', document.getElementById('edad').value);
+                localStorage.setItem('internacional', document.getElementById('internacional').value);
+
+                window.location.href = "formSocioeconomico.html";
+            });
+        </script>
     </body>
 </html>

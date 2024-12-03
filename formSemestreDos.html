@@ -1,3 +1,4 @@
+<!--FORM SEMESTRE DOS-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,40 +12,69 @@
             <h1>Formulario</h1>
             <h2>Datos académicos al final del segundo semestre</h2>
             <h3>Por favor llene los siguientes datos</h3>
-            <form action="/submit">
+            <form id="formSemestreDos">
                 <div class="form-group">
-                    <label for="modoApli">1. Ingrese sus unidades curriculares acreditadas </label>
-                    <input type="num" id="acreditadas2" name="acreditadas2" min="0" max="20" required>
+                    <label for="acreditadas2">1. Ingrese sus unidades
+                        curriculares acreditadas </label>
+                    <input type="number" id="acreditadas2" name="acreditadas2"
+                        min="0" max="20" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="carrera">2. Ingrese sus unidades curriculares inscritas</label>
-                    <input type="num" id="inscritas2" name="inscritas2" min="0" max="26" required>
+                    <label for="inscritas2">2. Ingrese sus unidades curriculares
+                        inscritas</label>
+                    <input type="number" id="inscritas2" name="inscritas2"
+                        min="0"
+                        max="26" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="turno">3. Ingrese sus unidades curriculares evaluadas</label>
-                    <input type="num" id="evaluadas2" name="evaluadas2" min="0" max="45" required>
+                    <label for="evaluadas2">3. Ingrese sus unidades curriculares
+                        evaluadas</label>
+                    <input type="number" id="evaluadas2" name="evaluadas2"
+                        min="0"
+                        max="45" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="tituloPrev">4. Ingrese sus unidades curriculares aprobadas</label>
-                    <input type="num" id="aprobadas2" name="aprobadas2" min="0" max="26" required>
+                    <label for="aprobadas2">4. Ingrese sus unidades curriculares
+                        aprobadas</label>
+                    <input type="number" id="aprobadas2" name="aprobadas2"
+                        min="0"
+                        max="26" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="tituloPrev">5. Ingrese sus unidades curriculares calificadas</label>
-                    <input type="num" id="calificadas2" name="calificadas2" min="0" max="20" required>
+                    <label for="calificadas2">5. Ingrese sus unidades
+                        curriculares calificadas</label>
+                    <input type="number" id="calificadas2" name="calificadas2"
+                        min="0" max="20" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="tituloPrev">6. Ingrese sus unidades curriculares sin evaluar</label>
-                    <input type="num" id="noevaluadas2" name="noevaluadas2" min="0" max="12" required>
+                    <label for="noevaluadas2">6. Ingrese sus unidades
+                        curriculares sin evaluar</label>
+                    <input type="number" id="noevaluadas2" name="noevaluadas2"
+                        min="0" max="12" required>
                 </div>
             </form>
-            <button class="btn next-page">
-                <a style="color: white;" href="formSemestreDos.html">Continuar</a>
+            <button type="button" class="btn next-page"
+                id="submitFormSemestreDos">
+                Finalizar
             </button>
         </div>
+
+        <script>
+            document.getElementById('submitFormSemestreDos').addEventListener('click', function() {
+                localStorage.setItem('acreditadas2', document.getElementById('acreditadas2').value);
+                localStorage.setItem('inscritas2', document.getElementById('inscritas2').value);
+                localStorage.setItem('evaluadas2', document.getElementById('evaluadas2').value);
+                localStorage.setItem('aprobadas2', document.getElementById('aprobadas2').value);
+                localStorage.setItem('calificadas2', document.getElementById('calificadas2').value);
+                localStorage.setItem('noevaluadas2', document.getElementById('noevaluadas2').value);
+
+                window.location.href = "prediccion.html";
+            });
+        </script>
     </body>
 </html>

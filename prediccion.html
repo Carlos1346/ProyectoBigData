@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Predicción</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="form" id="resultado">
+            <h1>Resultados de la predicción</h1>
+            <p id="prediccionResultado">Cargando...</p>
+        </div>
+
+        <script>
+        //Datos demograficos
+        const estadoCivil = localStorage.getItem('estadoCivil');
+        const nacionalidad = localStorage.getItem('nacionalidad');
+        const desplazado = localStorage.getItem('desplazado');
+        const genero = localStorage.getItem('genero');
+        const edad = localStorage.getItem('edad');
+        const internacional = localStorage.getItem('internacional');
+
+        //Datos socioeconomicos
+        const tituloMadre = localStorage.getItem('tituloMadre');
+        const tituloPadre = localStorage.getItem('tituloPadre');
+        const ocupacionMadre = localStorage.getItem('ocupacionMadre');
+        const ocupacionPadre = localStorage.getItem('ocupacionPadre');
+        const especial = localStorage.getItem('especial');
+        const deudor = localStorage.getItem('deudor');
+        const vigente = localStorage.getItem('vigente');
+        const becario = localStorage.getItem('becario');
+
+        //Datos academicos
+        const modoApli = localStorage.getItem('modoApli');
+        const carrera = localStorage.getItem('carrera');
+        const turno = localStorage.getItem('turno');
+        const tituloPre = localStorage.getItem('tituloPre');
+
+        //Datos semestre uno
+        const acreditadas1 = localStorage.getItem('acreditadas1');
+        const inscritas1 = localStorage.getItem('inscritas1');
+        const evaluadas1 = localStorage.getItem('evaluadas1');
+        const aprobadas1 = localStorage.getItem('aprobadas1');
+        const calificadas1 = localStorage.getItem('calificadas1');
+        const noevaluadas1 = localStorage.getItem('noevaluadas1');
+
+        //Datos semestre dos
+        const acreditadas2 = localStorage.getItem('acreditadas2');
+        const inscritas2 = localStorage.getItem('inscritas2');
+        const evaluadas2 = localStorage.getItem('evaluadas2');
+        const aprobadas2 = localStorage.getItem('aprobadas2');
+        const calificadas2 = localStorage.getItem('calificadas2');
+        const noevaluadas2 = localStorage.getItem('noevaluadas2');
+
+        const data = {
+            estadoCivil,
+            nacionalidad,
+            desplazado,
+            genero,
+            edad,
+            internacional,
+            tituloMadre,
+            tituloPadre,
+            ocupacionMadre,
+            ocupacionPadre,
+            especial,
+            deudor,
+            vigente,
+            becario,
+            modoApli,
+            carrera,
+            turno,
+            tituloPre,
+            acreditadas1,
+            inscritas1,
+            evaluadas1,
+            aprobadas1,
+            calificadas1,
+            noevaluadas1,
+            acreditadas2,
+            inscritas2,
+            evaluadas2,
+            aprobadas2,
+            calificadas2,
+            noevaluadas2
+        };
+
+
+    </script>
+
+    </body>
+</html>
