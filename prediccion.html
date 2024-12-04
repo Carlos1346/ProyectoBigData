@@ -1,93 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Predicción</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="form" id="resultado">
-            <h1>Resultados de la predicción</h1>
-            <p id="prediccionResultado">Cargando...</p>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form" id="resultado">
+        <h1>Resultados de la predicción</h1>
+        <p id="prediccionResultado">Cargando...</p>
+    </div>
 
-        <script>
-        //Datos demograficos
-        const estadoCivil = localStorage.getItem('estadoCivil');
-        const nacionalidad = localStorage.getItem('nacionalidad');
-        const desplazado = localStorage.getItem('desplazado');
-        const genero = localStorage.getItem('genero');
-        const edad = localStorage.getItem('edad');
-        const internacional = localStorage.getItem('internacional');
-
-        //Datos socioeconomicos
-        const tituloMadre = localStorage.getItem('tituloMadre');
-        const tituloPadre = localStorage.getItem('tituloPadre');
-        const ocupacionMadre = localStorage.getItem('ocupacionMadre');
-        const ocupacionPadre = localStorage.getItem('ocupacionPadre');
-        const especial = localStorage.getItem('especial');
-        const deudor = localStorage.getItem('deudor');
-        const vigente = localStorage.getItem('vigente');
-        const becario = localStorage.getItem('becario');
-
-        //Datos academicos
-        const modoApli = localStorage.getItem('modoApli');
-        const carrera = localStorage.getItem('carrera');
-        const turno = localStorage.getItem('turno');
-        const tituloPre = localStorage.getItem('tituloPre');
-
-        //Datos semestre uno
-        const acreditadas1 = localStorage.getItem('acreditadas1');
-        const inscritas1 = localStorage.getItem('inscritas1');
-        const evaluadas1 = localStorage.getItem('evaluadas1');
-        const aprobadas1 = localStorage.getItem('aprobadas1');
-        const calificadas1 = localStorage.getItem('calificadas1');
-        const noevaluadas1 = localStorage.getItem('noevaluadas1');
-
-        //Datos semestre dos
-        const acreditadas2 = localStorage.getItem('acreditadas2');
-        const inscritas2 = localStorage.getItem('inscritas2');
-        const evaluadas2 = localStorage.getItem('evaluadas2');
-        const aprobadas2 = localStorage.getItem('aprobadas2');
-        const calificadas2 = localStorage.getItem('calificadas2');
-        const noevaluadas2 = localStorage.getItem('noevaluadas2');
-
+    <script>
+    async function predict() {
         const data = {
-            estadoCivil,
-            nacionalidad,
-            desplazado,
-            genero,
-            edad,
-            internacional,
-            tituloMadre,
-            tituloPadre,
-            ocupacionMadre,
-            ocupacionPadre,
-            especial,
-            deudor,
-            vigente,
-            becario,
-            modoApli,
-            carrera,
-            turno,
-            tituloPre,
-            acreditadas1,
-            inscritas1,
-            evaluadas1,
-            aprobadas1,
-            calificadas1,
-            noevaluadas1,
-            acreditadas2,
-            inscritas2,
-            evaluadas2,
-            aprobadas2,
-            calificadas2,
-            noevaluadas2
+            estadoCivil: parseFloat(localStorage.getItem('estadoCivil')) || 0,
+            nacionalidad: parseFloat(localStorage.getItem('nacionalidad')) || 0,
+            desplazado: parseFloat(localStorage.getItem('desplazado')) || 0,
+            genero: parseFloat(localStorage.getItem('genero')) || 0,
+            edad: parseFloat(localStorage.getItem('edad')) || 0,
+            internacional: parseFloat(localStorage.getItem('internacional')) || 0,
+            tituloMadre: parseFloat(localStorage.getItem('tituloMadre')) || 0,
+            tituloPadre: parseFloat(localStorage.getItem('tituloPadre')) || 0,
+            ocupacionMadre: parseFloat(localStorage.getItem('ocupacionMadre')) || 0,
+            ocupacionPadre: parseFloat(localStorage.getItem('ocupacionPadre')) || 0,
+            especial: parseFloat(localStorage.getItem('especial')) || 0,
+            deudor: parseFloat(localStorage.getItem('deudor')) || 0,
+            vigente: parseFloat(localStorage.getItem('vigente')) || 0,
+            becario: parseFloat(localStorage.getItem('becario')) || 0,
+            modoApli: parseFloat(localStorage.getItem('modoApli')) || 0,
+            carrera: parseFloat(localStorage.getItem('carrera')) || 0,
+            turno: parseFloat(localStorage.getItem('turno')) || 0,
+            tituloPre: parseFloat(localStorage.getItem('tituloPre')) || 0,
+            acreditadas1: parseFloat(localStorage.getItem('acreditadas1')) || 0,
+            inscritas1: parseFloat(localStorage.getItem('inscritas1')) || 0,
+            evaluadas1: parseFloat(localStorage.getItem('evaluadas1')) || 0,
+            aprobadas1: parseFloat(localStorage.getItem('aprobadas1')) || 0,
+            calificadas1: parseFloat(localStorage.getItem('calificadas1')) || 0,
+            noevaluadas1: parseFloat(localStorage.getItem('noevaluadas1')) || 0,
+            acreditadas2: parseFloat(localStorage.getItem('acreditadas2')) || 0,
+            inscritas2: parseFloat(localStorage.getItem('inscritas2')) || 0,
+            evaluadas2: parseFloat(localStorage.getItem('evaluadas2')) || 0,
+            aprobadas2: parseFloat(localStorage.getItem('aprobadas2')) || 0,
+            calificadas2: parseFloat(localStorage.getItem('calificadas2')) || 0,
+            noevaluadas2: parseFloat(localStorage.getItem('noevaluadas2')) || 0,
         };
 
+        document.getElementById('resultado').innerHTML = `<p>Cargando...</p>`;
 
+        try {
+            const response = await fetch('http://localhost:5000/predict', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) throw new Error('Error en la solicitud');
+
+            const result = await response.json();
+
+            // Redirección basada en el resultado de la predicción
+            if (result.prediction === 0) {
+                localStorage.setItem('probabilidad', result.probability);
+                window.location.href = 'PrediccionMala.html';
+            } else if (result.prediction === 1) {
+                localStorage.setItem('probabilidad', result.probability);
+                window.location.href = 'PrediccionMedia.html';
+            } else if (result.prediction === 2) {
+                localStorage.setItem('probabilidad', result.probability);
+                window.location.href = 'PrediccionBuena.html';
+            } else {
+                document.getElementById('resultado').innerHTML = `
+                    <p>Error: Predicción inesperada (${result.prediction})</p>
+                `;
+            }
+        } catch (error) {
+            document.getElementById('resultado').innerHTML = `
+                <p>Error: ${error.message}</p>
+            `;
+        }
+    }
+
+    // Ejecutar la función al cargar la página
+    predict();
     </script>
-
-    </body>
+</body>
 </html>

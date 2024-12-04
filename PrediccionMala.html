@@ -22,15 +22,10 @@
 
             <div class="prediction-box">
                 <p class="prediction-label">Predicción:</p>
-                <div class="prediction-result-mid">
+                <div class="prediction-result-mid" id="resultado">
                     Es posible que abandones la escuela :c
                     ¡Sigue esforzandote y cambia tus habitos para evitarlo!
                 </div>
-            </div>
-
-            <div class="button-container">
-                <button class="btn next-page">Next Page</button>
-                <button class="btn clear-form">Limpiar Formulario</button>
             </div>
         </div>
 
@@ -39,6 +34,19 @@
             <p>Estudios muestran que los factores socioeconómicos son una de las principales causas del abandono escolar.</p>
         </div>
     </div>
+    <script>
+        // Recuperar la probabilidad de localStorage
+        const probabilidad = localStorage.getItem('probabilidad');
+
+        // Mostrar la probabilidad en el contenedor de resultado
+        if (probabilidad) {
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `
+                La probabilidad de que abandones tus estudios es ${(parseFloat(probabilidad) * 100).toFixed(2)}%. 
+                ¡Sigue esforzandote y cambia tus habitos para evitarlo!
+            `;
+        }
+    </script>
 </body>
 
 </html>
