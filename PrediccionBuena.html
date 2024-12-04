@@ -8,29 +8,22 @@
 </head>
 <body>
     <div class="result-container">
-        
         <div class="info-box left-info">
             <h2>Sabías que</h2>
             <p>El abandono escolar es una preocupación global. Más de 1.2 millones de estudiantes abandonan la escuela cada año en el mundo.</p>
         </div>
 
         <div class="outer-box">
-            
             <div class="title-box">
                 <h1>Predicción de Continuidad</h1>
             </div>
 
             <div class="prediction-box">
                 <p class="prediction-label">Predicción:</p>
-                <div class="prediction-result">
+                <div class="prediction-result" id="resultado">
                     La probabilidad de que termines tus estudios es muy alta c:
-                    ¡Sigue esforzandote y cumpliras tus objetivos!
+                    ¡Sigue esforzándote y cumplirás tus objetivos!
                 </div>
-            </div>
-
-            <div class="button-container">
-                <button class="btn next-page">Next Page</button>
-                <button class="btn clear-form"><a class="btn clear-form"  href="index.html">Limpiar Formulario</a></button>
             </div>
         </div>
 
@@ -38,8 +31,20 @@
             <h2>Sabías que</h2>
             <p>Estudios muestran que los factores socioeconómicos son una de las principales causas del abandono escolar.</p>
         </div>
-        
     </div>
-</body>
 
+    <script>
+        // Recuperar la probabilidad de localStorage
+        const probabilidad = localStorage.getItem('probabilidad');
+
+        // Mostrar la probabilidad en el contenedor de resultado
+        if (probabilidad) {
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `
+                La probabilidad de que termines tus estudios es ${(parseFloat(probabilidad) * 100).toFixed(2)}%. 
+                ¡Sigue esforzándote y cumplirás tus objetivos!
+            `;
+        }
+    </script>
+</body>
 </html>

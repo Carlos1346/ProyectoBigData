@@ -27,11 +27,6 @@
                     ¡Sigue esforzandote y obtendras mejores resultados!
                 </div>
             </div>
-
-            <div class="button-container">
-                <button class="btn next-page">Next Page</button>
-                <button class="btn clear-form">Limpiar Formulario</button>
-            </div>
         </div>
 
         <div class="info-box right-info">
@@ -39,6 +34,19 @@
             <p>Estudios muestran que los factores socioeconómicos son una de las principales causas del abandono escolar.</p>
         </div>
     </div>
+    <script>
+        // Recuperar la probabilidad de localStorage
+        const probabilidad = localStorage.getItem('probabilidad');
+
+        // Mostrar la probabilidad en el contenedor de resultado
+        if (probabilidad) {
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `
+                La probabilidad de que termines tus estudios es ${(parseFloat(probabilidad) * 100).toFixed(2)}%. 
+                ¡Sigue esforzandote y obtendras mejores resultados!
+            `;
+        }
+    </script>
 </body>
 
 </html>

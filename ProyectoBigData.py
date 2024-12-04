@@ -1,3 +1,4 @@
+
 import pandas as pd
 import plotly.express as px
 import seaborn as sns
@@ -40,6 +41,7 @@ plt.show()
 
 new_data = data.copy()
 new_data = new_data.drop(columns=['Unemployment rate','Inflation rate','GDP'], axis=1)
+new_data = new_data.drop('Application order', axis=1)
 new_data.info()
 
 #EXPLORING DATA ANALYSIS
@@ -113,4 +115,7 @@ print("KNN accuracy :",round(accuracy_score(y_test,y_pred)*100,2),"%")
 #SAVE THE BEST MODEL
 import joblib
 
-joblib.dump(rfc, 'dropout_model.pkl')
+path = 'C:\\Apps\\ProyectoBigData'
+model = 'dropout_model.pkl'
+full_path = f"{path}/{model}"
+joblib.dump(lr, full_path)
