@@ -4,7 +4,7 @@ import joblib
 
 #Inicializar Flask
 app = Flask(__name__)
-CORS(app) #Permite solicitudes desde otros origenes
+CORS(app) 
 
 model = joblib.load('dropout_model.pkl')
 
@@ -37,6 +37,19 @@ def predict():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/status', methods=['GET'])
+def status():
+    return jsonify({'status': 'API activa'}), 200
+
+@app.route('/retrain', methods=['PUT'])
+def retrain():
+    return jsonify({'message': 'Modelo actualizado'}), 200
+
+@app.route('/delete-temp', methods=['DELETE'])
+def delete_temp():
+    return jsonify({'message': 'Recursos temporales eliminados'}), 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)
